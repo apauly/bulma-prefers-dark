@@ -1,5 +1,6 @@
 // Color schemes
 
-=prefers-scheme($scheme)
-  @media (prefers-color-scheme: $scheme)
-    @content
+@if not mixin-exists(prefers-scheme)
+  =prefers-scheme($scheme)
+    @media (prefers-color-scheme: $scheme)
+      @content
